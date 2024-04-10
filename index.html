@@ -7,9 +7,21 @@
     <script>
         // Function to redirect to the custom app scheme
         function redirectToApp() {
+            var appScheme;
+            // Determine the custom app scheme based on the user's device
+            if (/Android/i.test(navigator.userAgent)) {
+                // Android device
+                appScheme = "com.hellornapp.auth://oauthredirect";
+            } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                // iOS device
+                appScheme = "com.msg91.hello:/";
+            } else {
+                // Default app scheme for other devices
+                appScheme = ""; // Replace this with your default app scheme
+            }
             // Redirect to the custom app scheme
             console.log('----- Hitting Mobile Scheme -----')
-            window.location.href = "com.hellornapp.auth://oauthredirect";
+            window.location.href = appScheme;
         }
 
         // Function to initiate redirection after a delay
