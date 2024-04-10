@@ -19,6 +19,8 @@
                 // Default app scheme for other devices
                 appScheme = ""; // Replace this with your default app scheme
             }
+
+            alert('Platform is ' + appScheme);
             // Redirect to the custom app scheme
             console.log('----- Hitting Mobile Scheme -----')
             window.location.href = appScheme;
