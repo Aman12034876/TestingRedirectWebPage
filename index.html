@@ -20,7 +20,6 @@
                 appScheme = ""; // Replace this with your default app scheme
             }
 
-            alert('Platform is ' + appScheme);
             // Redirect to the custom app scheme
             console.log('----- Hitting Mobile Scheme -----')
             window.location.href = appScheme;
@@ -29,7 +28,7 @@
         // Function to initiate redirection after a delay
         function initiateRedirection() {
             // Wait for 3 seconds (3000 milliseconds) before redirecting
-            setTimeout(redirectToApp, 3000); // 3000 milliseconds = 3 seconds
+            setTimeout(redirectToApp, 2000); // 3000 milliseconds = 3 seconds
         }
          window.onload = initiateRedirection;
     </script>
